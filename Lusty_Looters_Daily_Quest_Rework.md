@@ -175,31 +175,31 @@ Open each section to see its quests.
 <details>
 <summary><strong>🦖 Creature hunts (25)</strong></summary>
 
-37. **Dodo Killer** — 5 kills: Dodo or Jerboa. `edit existing`
+37. **Small Game Sweep** — 5 kills: Dodo or Jerboa. `edit existing`
 38. **Take Out the Trash** — Kill 10 Dung Beetles. `already made`
 39. **Piranha Predator** — Kill 50 Piranhas. `already made`
 40. **Exterminator Extraordinaire** — 20 kills: Meganeura, Titanomyrma or other eligible bugs (down from 500). `edit existing`
-41. **Kraken’s Bounty** — 1 kill: Tusoteuthis, Karkinos, Deinosuchus or Spinosaurus (down from 5 Tusoteuthis). `edit existing`
+41. **Monster Hunt** — 1 kill: Tusoteuthis, Karkinos, Deinosuchus or Spinosaurus (down from 5 Tusoteuthis). `edit existing`
 42. **Predator Patrol** — Kill 10 Raptors. `already made`
-43. **Rex Hunt** — 5 kills: Rex, Spinosaurus or Carnotaurus. `edit existing`
+43. **Big Game Cull** — 5 kills: Rex, Spinosaurus or Carnotaurus. `edit existing`
 44. **Cave Clearance** — 20 kills: Onyc, Araneo or Arthropluera. `edit existing`
 45. **Centipede Control** — Kill 25 Arthropluera. `already made`
-46. **Managarmr Shutdown** — 5 kills: Managarmr, Ravager or Carnotaurus (down from 15 Managarmr). `edit existing`
-47. **Sarco Sweep** — 15 kills: Sarco or Deinosuchus. `not made yet`
-48. **Kapro Catch** — 15 kills: Kaprosuchus, Sarco or Deinosuchus. `not made yet`
-49. **Baryonyx Bounty** — 12 kills: Baryonyx or Carnotaurus. `not made yet`
-50. **Spino Stalker** — 5 kills: Spinosaurus, Rex or Carnotaurus. `not made yet`
-51. **Carno Cull** — 15 kills: Carnotaurus or Raptor. `not made yet`
-52. **Allo Ambush** — 12 kills: Allosaurus or Carnotaurus. `not made yet`
-53. **Terror Bird Takedown** — 20 kills: Terror Bird or Raptor. `not made yet`
-54. **Thylacoleo Takedown** — 10 kills: Thylacoleo, Dire Bear or Carnotaurus. `not made yet`
-55. **Direwolf Den** — 20 kills: Direwolf or Raptor. `not made yet`
-56. **Mammoth March** — 10 kills: Mammoth, Paraceratherium, Morellatops or Carnotaurus. `not made yet`
+46. **Predator Shutdown** — 5 kills: Managarmr, Ravager or Carnotaurus (down from 15 Managarmr). `edit existing`
+47. **Swamp Jaws** — 15 kills: Sarco or Deinosuchus. `not made yet`
+48. **Swamp Ambush** — 15 kills: Kaprosuchus, Sarco or Deinosuchus. `not made yet`
+49. **Predator Bounty** — 12 kills: Baryonyx or Carnotaurus. `not made yet`
+50. **Big Game Pursuit** — 5 kills: Spinosaurus, Rex or Carnotaurus. `not made yet`
+51. **Fang and Claw** — 15 kills: Carnotaurus or Raptor. `not made yet`
+52. **Carnivore Ambush** — 12 kills: Allosaurus or Carnotaurus. `not made yet`
+53. **Feathered Fury** — 20 kills: Terror Bird or Raptor. `not made yet`
+54. **Forest Threats** — 10 kills: Thylacoleo, Dire Bear or Carnotaurus. `not made yet`
+55. **Pack Breaker** — 20 kills: Direwolf or Raptor. `not made yet`
+56. **Heavy Hitters** — 10 kills: Mammoth, Paraceratherium, Morellatops or Carnotaurus. `not made yet`
 57. **Winged Hunt** — 15 kills: Argentavis, Dimorphodon or Yi Ling. `not made yet`
-58. **Mantis Menace** — 15 kills: Mantis or Arthropluera. `not made yet`
-59. **Anglerfish Hunt** — 10 kills: Anglerfish, Piranha or Electrophorus. `not made yet`
-60. **Megalodon Menace** — 15 kills: Megalodon, Piranha or Electrophorus. `not made yet`
-61. **Rock Golem Rumble** — 1 kill: Rock Elemental, Ankylosaurus or Doedicurus. `not made yet`
+58. **Crawler Control** — 15 kills: Mantis or Arthropluera. `not made yet`
+59. **Waterway Hunt** — 10 kills: Anglerfish, Piranha or Electrophorus. `not made yet`
+60. **Danger Below** — 15 kills: Megalodon, Piranha or Electrophorus. `not made yet`
+61. **Tough Targets** — 1 kill: Rock Elemental, Ankylosaurus or Doedicurus. `not made yet`
 
 [Back to top](#top)
 
