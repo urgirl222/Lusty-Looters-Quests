@@ -43,6 +43,7 @@
   - [Crafting](#crafting)
   - [Special & mixed](#special--mixed)
 - [Before adding these to the live rotation](#before-adding-these-to-the-live-rotation)
+- [Credits](#credits)
 
 ## Overview
 
@@ -194,7 +195,7 @@ Open each section to see its quests.
 54. **Thylacoleo Takedown** — 10 kills: Thylacoleo, Dire Bear or Carnotaurus. `not made yet`
 55. **Direwolf Den** — 20 kills: Direwolf or Raptor. `not made yet`
 56. **Mammoth March** — 10 kills: Mammoth, Paraceratherium, Morellatops or Carnotaurus. `not made yet`
-57. **Argentavis Hunt** — 15 kills: Argentavis or Dimorphodon. `not made yet`
+57. **Winged Hunt** — 15 kills: Argentavis, Dimorphodon or Yi Ling. `not made yet`
 58. **Mantis Menace** — 15 kills: Mantis or Arthropluera. `not made yet`
 59. **Anglerfish Hunt** — 10 kills: Anglerfish, Piranha or Electrophorus. `not made yet`
 60. **Megalodon Menace** — 15 kills: Megalodon, Piranha or Electrophorus. `not made yet`
@@ -315,6 +316,13 @@ Open each section to see its quests.
 This file is the **working draft** for the daily quest rework.
 
 The counts at the top show how many quests are already in the old config, how many need edits, and how many still need creating. They **do not** mean the revised goals have already been implemented.
+
+---
+
+## Credits
+
+- **!azaleaa** — Quest planning, rework and coordination.
+- **SammyWammyM8** — Quest feedback, creature selection and balancing suggestions.
 
 <p align="center">
   <strong>Lusty Looters</strong><br>
