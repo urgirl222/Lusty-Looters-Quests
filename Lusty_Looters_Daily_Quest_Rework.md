@@ -18,6 +18,10 @@
   <img src="https://img.shields.io/badge/Status-Draft-3b82f6?style=for-the-badge" alt="draft status">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Daily%20Quest%20Reward-5%2C000%20Gold%20Nuggets-eab308?style=for-the-badge" alt="5000 Gold Nuggets per quest">
+</p>
+
 > [!IMPORTANT]
 > **This is still a draft.** These revised quests and goals are **not live yet**. Some old quests may already exist in the config with their original requirements.
 
@@ -30,6 +34,7 @@
 ## Quick links
 
 - [Overview](#overview)
+- [Rewards and store changes](#rewards-and-store-changes)
 - [Quest list](#quest-list)
   - [Biome hunts](#biome-hunts)
   - [Creature hunts](#creature-hunts)
@@ -64,6 +69,15 @@ Example:
 
 - `20 kills: Sarco, Kaprosuchus or Piranha`
 - This means **20 kills total**, in any combination.
+
+### Rewards and store changes
+
+> [!TIP]
+> **Every daily quest will award 5,000 Gold Nuggets.** The reward is the same regardless of the quest, its category, or its requirements.
+
+- **Daily quest reward:** 5,000 Gold Nuggets each.
+- **Store:** The **Reset Dailies** item/option will be removed from the store as part of this update.
+- These are planned changes for the rework and are **not confirmed live**.
 
 ### Daily quest rules
 
@@ -292,7 +306,9 @@ Open each section to see its quests.
 - [ ] Confirm Alpha availability on every map. If a map has no qualifying wild Alpha, replace or restrict that quest.
 - [ ] Check that grouped item tracking works properly, including Fungal Wood and any alternative resource groups.
 - [ ] Revisit grind-heavy objectives like **25,000 Keratin** and **3,000 Black Pearls**.
-- [ ] Review reward payouts against Gold Nugget income before enabling the new pool.
+- [ ] Set every daily quest reward to **5,000 Gold Nuggets** and verify it in the config.
+- [ ] Remove **Reset Dailies** from the store.
+- [ ] Check the fixed 5,000-Nugget payout against the server economy before enabling the new pool.
 
 ## Final note
 
