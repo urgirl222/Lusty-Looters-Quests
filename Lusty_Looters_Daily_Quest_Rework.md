@@ -7,7 +7,7 @@
 <h1 align="center">Lusty Looters — Daily Quest Rework</h1>
 
 <p align="center">
-  Draft daily quest pool for review and balancing.
+  Daily quests are the first step in a wider quest and economy review. Weekly and permanent quests will be reviewed next, and shop pricing and the wider Gold Nugget economy may be adjusted afterwards.
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 </p>
 
 > [!IMPORTANT]
-> **This is still a draft.** These revised quests and goals are **not live yet**. Some old quests may already exist in the config with their original requirements.
+> **This is still a draft — nothing in this rework is live yet.** Every daily is planned to pay **5,000 Gold Nuggets**, regardless of the quest. **Weekly and permanent quests are being reviewed separately after the dailies**, and we may rebalance the shop economy once those reviews are done. The 5,000-Nugget daily reward should not be treated as the final economy balance. Existing quests may still be active with their old requirements.
 
 > [!NOTE]
 > The goal with this rework is simple: make dailies feel better, cover more playstyles, and be **doable on any map without needing to transfer**.
@@ -78,6 +78,8 @@ Example:
 
 - **Daily quest reward:** 5,000 Gold Nuggets each.
 - **Store:** The **Reset Dailies** item/option will be removed from the store as part of this update.
+- **Next up:** Weekly quests, followed by permanent quests. Both will be reviewed and balanced separately.
+- **Later:** Shop pricing and the wider Gold Nugget economy may be adjusted after those reviews. Nothing is confirmed for those changes yet.
 - These are planned changes for the rework and are **not confirmed live**.
 
 ### Daily quest rules
@@ -310,6 +312,8 @@ Open each section to see its quests.
 - [ ] Set every daily quest reward to **5,000 Gold Nuggets** and verify it in the config.
 - [ ] Remove **Reset Dailies** from the store.
 - [ ] Check the fixed 5,000-Nugget payout against the server economy before enabling the new pool.
+- [ ] Review weekly and permanent quests separately after the daily quest update.
+- [ ] Reassess shop prices and the wider economy after the other quest pools have been reviewed, if needed.
 
 ## Final note
 
