@@ -4,91 +4,112 @@
   <img src="https://i.imgur.com/hSLVhdU.png" alt="Lusty Looters logo" width="180">
 </p>
 
-<h1 align="center">Lusty Looters — Daily Quest Rework</h1>
+<h1 align="center">Lusty Looters — Daily &amp; Weekly Quest Rework</h1>
 
 <p align="center">
-  Daily quests are the first step in a wider quest and economy review. Weekly and permanent quests will be reviewed next, and shop pricing and the wider Gold Nugget economy may be adjusted afterwards.
+  Dailies cover quick goals across different playstyles. Weeklies focus on gathering, crafting and useful supplies that players can work towards throughout the week.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Total%20Quests-121-8b5cf6?style=for-the-badge" alt="121 total quests">
-  <img src="https://img.shields.io/badge/Configured-121-22c55e?style=for-the-badge" alt="121 quests configured">
-  <img src="https://img.shields.io/badge/Status-Awaiting%20Server%20Testing-f59e0b?style=for-the-badge" alt="awaiting server testing">
-  <img src="https://img.shields.io/badge/Live%20Rollout-Unconfirmed-3b82f6?style=for-the-badge" alt="live rollout unconfirmed">
+  <img src="https://img.shields.io/badge/Daily%20Quests-121-8b5cf6?style=for-the-badge" alt="121 daily quests">
+  <img src="https://img.shields.io/badge/Weekly%20Quests-100-22c55e?style=for-the-badge" alt="100 weekly quests">
+  <img src="https://img.shields.io/badge/Status-In-game%20Checks%20Pending-f59e0b?style=for-the-badge" alt="completion testing pending">
+  <img src="https://img.shields.io/badge/Live%20Rollout-Unconfirmed-3b82f6?style=for-the-badge" alt="cluster-wide live rollout unconfirmed">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Daily%20Quest%20Reward-5%2C000%20Gold%20Nuggets-eab308?style=for-the-badge" alt="5000 Gold Nuggets per quest">
+  <img src="https://img.shields.io/badge/Daily%20Reward-5%2C000%20Gold%20Nuggets-eab308?style=for-the-badge" alt="5000 Gold Nuggets per daily">
+  <img src="https://img.shields.io/badge/Weekly%20Reward-25%2C000%20Gold%20Nuggets-eab308?style=for-the-badge" alt="25000 Gold Nuggets per weekly">
 </p>
 
 > [!IMPORTANT]
-> **All 121 daily quests are now configured. Live rollout has not been confirmed.** Every daily is set to pay **5,000 Gold Nuggets**, with no additional item rewards. The config has passed static reference checks, but in-game tracking, payouts and availability on every map still need testing. **Weekly and permanent quest balancing remains a later phase**, followed by a possible review of shop prices and the wider Gold Nugget economy. The 5,000-Nugget daily reward is not a final economy balance.
+> **All 121 dailies and 100 weeklies are configured.** Dailies award **5,000 Gold Nuggets** and weeklies award **25,000 Gold Nuggets**, with no additional item or dino rewards. Two weekly quest views have been shown in-game, confirming that they load and display. Completion credit, payouts, reset behaviour and availability on every map still need testing.
 
 > [!NOTE]
-> The goal with this rework is simple: make dailies feel better, cover more playstyles, and be **doable on any map without needing to transfer**.
+> Daily and weekly configuration work is complete. **Permanent quest balancing is the next phase**, followed by a possible review of shop prices and the wider Gold Nugget economy. The current payouts are not a declaration that the economy review is finished.
 
 > [!WARNING]
-> The creature groups are configured for the intended cross-map design, but they have **not been verified against the live spawn tables** on every Lusty Looters map. A valid blueprint reference does not prove that a qualifying creature spawns on a particular map.
+> Cross-map availability is a design goal, not a completed test. Creature spawns, resource access, engrams and crafting-station compatibility still need checking on each map. Element gathering credit also needs a specific in-game test.
 
 ## Quick links
 
 - [Overview](#overview)
 - [Rewards and store changes](#rewards-and-store-changes)
-- [Variant support](#variant-support)
-- [Configuration fixes](#configuration-fixes)
-- [Quest list](#quest-list)
+- [How objectives and counters work](#how-objectives-and-counters-work)
+- [Daily rules and variant support](#daily-rules-and-variant-support)
+- [Weekly rules](#weekly-rules)
+- [Daily quest list](#daily-quest-list)
   - [Biome hunts](#biome-hunts)
   - [Creature hunts](#creature-hunts)
   - [Creature class hunts](#creature-class-hunts)
   - [Gathering](#gathering)
   - [Crafting](#crafting)
   - [Special & mixed](#special--mixed)
-- [Before adding these to the live rotation](#before-adding-these-to-the-live-rotation)
+- [Weekly quest list](#weekly-quest-list)
+  - [Supplies and ammunition](#weekly-supplies-and-ammunition)
+  - [Manufacturing](#weekly-manufacturing)
+  - [Weapons and tools](#weekly-weapons-and-tools)
+  - [Saddles](#weekly-saddles)
+  - [Clothing](#weekly-clothing)
+- [Configuration checks](#configuration-checks)
+- [Testing and rollout](#testing-and-rollout)
 - [Credits](#credits)
 
 ## Overview
 
-### Progress
+Updated **3 November 2026**.
 
-Updated **2 November 2026**.
+| Quest pool | Configured | Reward per quest |
+| :-- | --: | --: |
+| Daily | 121 | 5,000 Gold Nuggets |
+| Weekly | 100 | 25,000 Gold Nuggets |
+| Permanent | 126 | Existing rewards; balance review pending |
+| **Total in the config** | **347** | |
 
-| Configuration status | Count |
-| :-- | --: |
-| Existing dailies retained or reworked | 18 |
-| New dailies added | 103 |
-| **Daily quests configured** | **121** |
-
-The previous pool contained 31 dailies: 18 were retained or reworked, 13 were retired, and 103 new quests were added. The 18 retained quests include the 11 planned objective reworks and 7 quests whose objectives were kept. Every daily now uses the same 5,000-Nugget reward.
+The daily pool replaces the previous 31 dailies: 18 were retained or reworked, 13 were retired and 103 new quests were added. The weekly pool replaces the previous 17 weeklies with **100 progression quests**. The earlier hunt-based weekly draft has been superseded.
 
 ### Status tags
 
-- `configured` — included in the prepared JSON, with its required counters and reward set.
-- Configured does **not** mean tested in-game or confirmed live. Server validation and rollout are tracked below.
-
-### How grouped kills work
-
-Alternative creatures within one objective share **one kill counter**. Mixed quests that require two objectives keep separate counters for each required group or activity.
-
-Example:
-
-- `20 kills: Sarco, Kaprosuchus or Piranha`
-- This means **20 kills total**, in any combination.
+- `configured` means the quest is included in the current JSON, with its objectives, counters and reward set.
+- It does **not** mean completion credit, payouts or every map have been tested. Cluster-wide live rollout remains unconfirmed.
 
 ### Rewards and store changes
 
-> [!TIP]
-> **Every daily is configured to award 5,000 Gold Nuggets.** The reward is the same regardless of its category or requirements, and previous extra item rewards have been removed from the daily pool.
+- **Dailies:** exactly 5,000 Gold Nuggets each, with no extra rewards.
+- **Weeklies:** exactly 25,000 Gold Nuggets each, with no extra rewards.
+- **Assignments:** the config currently allows up to 3 dailies and 2 weeklies at a time. The listed pools are the selection pools, not simultaneous assignments.
+- **Reset Dailies:** removed from the prepared shop config. Its removal from the live store still needs confirming.
+- **Other shop settings:** existing prices, previous product removals and the reduced Red Gem selling rule are unchanged by this quest update.
+- **Next phase:** permanent quest requirements and rewards, followed by a possible wider economy review.
 
-- **Daily quest reward:** 5,000 Gold Nuggets each.
-- **Store:** The **Reset Dailies** product has been removed from the prepared shop config. Its removal from the live store still needs confirming.
-- **Other shop settings:** Existing prices, previous product removals and the reduced Red Gem selling rule are unchanged by this quest update.
-- **Next up:** Weekly quests, followed by permanent quests. Their requirements and rewards have not been rebalanced in this phase.
-- **Later:** Shop pricing and the wider economy may be adjusted after those reviews. No wider economy changes are confirmed here.
-- **Rollout:** Configuration work is complete; deployment and in-game results are not confirmed.
+## How objectives and counters work
 
-### Variant support
+Alternatives within one objective share **one total**. Separate requirements must **all** be completed.
 
-The supplied **12 EVO blueprint paths** have been added to the matching daily hunt groups. Supported catalogue and map variants are included where they match the objective.
+- A hunt requiring 20 Sarcos, Kaprosuchus or Piranhas means **20 qualifying kills total**, in any combination.
+- A gathering objective requiring 50,000 Wood, Fungal Wood, Stone or Metal Ore means **50,000 resources total**, not 50,000 of each.
+- A weekly requiring a daily completion, gathering and two crafted supplies has four separate requirements.
+- Eligible materials and items are listed in the description. A short progress label does not expand what counts.
+
+### Counter labels
+
+| Objective | Progress label |
+| :-- | :-- |
+| A shared gathering group | Resources Gathered |
+| A single resource | Metal Ore Gathered, Element Gathered or the matching resource name |
+| Crafted supplies | Tranq Arrows Crafted, Shotgun Shells Crafted or the matching item name |
+| Required daily completion | Daily Quests Completed |
+
+Internal group names and unrelated map prefixes have been removed from the relevant counter labels. The display-label review changed no tracking keys, targets, quantities or rewards.
+
+## Daily rules and variant support
+
+- No daily taming objectives.
+- Biome hunts require **20 kills each**.
+- Grouped hunts count eligible variants towards the same total.
+- The cross-map goal remains playable objectives without needing to transfer; live spawn coverage still needs checking.
+
+The supplied **12 EVO paths** are included in the relevant daily hunt groups.
 
 | EVO group | Included variants |
 | :-- | :-- |
@@ -96,30 +117,36 @@ The supplied **12 EVO blueprint paths** have been added to the matching daily hu
 | Alpha Rex / Tarbo | Alpha Tarbo, Alpha Rex and Alpha Legacy Rex |
 | Giganotosaurus | EVO Giga, Paleo Giga, Volcano Giga and Wasteland Giga |
 
-- Ordinary Rex hunts also accept the configured Alpha Rex/Tarbo variants.
-- Alpha objectives count qualifying Alphas; ordinary Rex or Giga variants do not satisfy an Alpha objective.
-- Variants in a grouped objective contribute to the same required total. They are not separate kill requirements.
-- Actual spawning and kill credit for these classes still need checking on the live servers.
+Ordinary Rex hunts also accept the configured Alpha Rex/Tarbo variants. Alpha objectives require qualifying Alphas; ordinary Rex or Giga variants do not satisfy them. Actual spawning and kill credit still need checking.
 
-### Configuration fixes
+## Weekly rules
 
-- Added separate daily tracking groups so changing the daily pool does not redefine the existing weekly or permanent counters.
-- Standardised wording, punctuation, number formatting and stat labels across old and new quests while retaining their existing names and themes.
-- Filled the missing targets for **Astrocetus Tamer**, **Megachelon Tamer** and **Parrot Tamer**.
-- Corrected malformed references used by **Surface Reaper Vanquisher**, **Electronics Batch**, **Bullet Barrage**, **Maeguana Tamer**, **System Shutdown** and **Wrath of the Boar Kings**.
-- Cleaned up matching quote errors and duplicate references elsewhere in the tracking lists.
-- All **264 current quests** pass static checks for missing trackers, empty referenced targets and malformed blueprint-reference syntax. This is not an in-game completion test.
-- Legacy fixes preserve quest IDs, required amounts, rewards, permissions and progression links. Weekly and permanent balance reviews are still pending.
+Weeklies focus on gathering and crafting that players can chip away at throughout normal play.
 
-### Daily quest rules
+- **Every weekly requires exactly 1 daily completion**, plus its listed gathering and crafting objectives.
+- **No weekly hunting, taming, boss, structure or placeable objectives.**
+- Crafting quantities vary by cost. Cheap ammunition and powders have larger counts; expensive supplies and equipment have smaller counts.
+- Persistent weapons, tools and saddles are limited to **1–2 items combined per weekly**. Ammunition and consumables have their own listed quantities.
+- Clothing objectives require **one matching five-piece set**, with a separate requirement for each slot. Five helmets cannot replace a complete set.
+- Multiple listed crafting requirements are all required. Alternatives inside one crafting group share its total.
 
-- No taming objectives.
-- Biome hunts use **20 kills each**.
-- Grouped quests include the configured eligible variants for their targets.
-- The main aim is **playable on every map**, not perfect biome realism.
+### Weekly gathering targets
 
-## Quest list
+| Resource tier | Required total | Eligible materials used in the pool |
+| :-- | --: | :-- |
+| Common | 50,000 | Wood, Fungal Wood, Stone, Flint, Metal Ore, Fibre, Thatch and Hide |
+| Rare | 10,000 | Crystal, Obsidian, Oil, Silica Pearls, Rare Flowers, Rare Mushrooms, Organic Polymer, Chitin, Keratin and Pelt |
+| Element | 5,000 | Actual Element |
+| Black Pearls | 5,000 | Black Pearls |
 
+Each quest lists its own eligible resources. Common and rare materials do not share a counter. Element and Black Pearls have separate objectives; Element Dust, Shards and Ore are not configured as substitutes for Element.
+
+The weekly pool contains **63 common-resource quests, 33 rare-resource quests, 2 Element quests and 2 Black Pearl quests**. Gathering credit must still be tested, particularly for Element acquisition methods.
+
+<a id="quest-list"></a>
+## Daily quest list
+
+**Every daily below awards 5,000 Gold Nuggets.** Open a section to view its quests.
 Open each section to see its quests.
 
 <a id="biome-hunts"></a>
@@ -332,33 +359,206 @@ Open each section to see its quests.
 
 </details>
 
-## Before adding these to the live rotation
 
-- [x] Build all **121 daily quests** in the JSON.
-- [x] Set every daily reward to exactly **5,000 Gold Nuggets**, with no extra items.
-- [x] Configure shared counters for grouped alternatives and separate counters for mixed requirements.
-- [x] Add the **12 supplied EVO paths** to the relevant daily groups.
-- [x] Repair the identified legacy tracker defects and validate the current quest references.
-- [x] Apply consistent wording and stat labels across old and new quests.
+## Weekly quest list
+
+**Every weekly below requires 1 daily completion and awards 25,000 Gold Nuggets.**
+
+<a id="weekly-supplies-and-ammunition"></a>
+<details>
+<summary><strong>📦 Supplies and ammunition (30)</strong></summary>
+
+Requires **1 daily completion** plus all listed objectives. **Reward: 25,000 Gold Nuggets each.**
+
+1. **Supply Run** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 1,000 items in any combination: Stone Arrows, Tranq Arrows, Advanced Rifle Bullets, or Shotgun Shells. `configured`
+2. **Frontier Stockpile** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 500 Narcotics; craft 250 Tranq Arrows. `configured`
+3. **Arrow Reserve** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Thatch, or Fibre; craft 1,000 Stone Arrows. `configured`
+4. **Tranq Reserve** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 500 Tranq Arrows. `configured`
+5. **Narcotic Reserve** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 1,000 Narcotics. `configured`
+6. **Medical Reserve** — Gather 10,000 resources in any combination: Rare Flowers, or Rare Mushrooms; craft 100 Medical Brews. `configured`
+7. **Stimulant Reserve** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 500 Stimulants. `configured`
+8. **Rifle Reserve** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 1,000 Advanced Rifle Bullets. `configured`
+9. **Shotgun Reserve** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 250 Shotgun Shells. `configured`
+10. **Sidearm Reserve** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 300 Simple Bullets. `configured`
+11. **Longneck Reserve** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 250 Simple Rifle Ammo. `configured`
+12. **Dart Reserve** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 100 Tranquilizer Darts. `configured`
+13. **Compound Ammunition** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft 250 Metal Arrows. `configured`
+14. **Sniper Reserve** — Gather 10,000 resources in any combination: Crystal, Obsidian, Oil, or Silica Pearls; craft 200 Advanced Sniper Bullets. `configured`
+15. **Pistol Reserve** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 500 Advanced Bullets. `configured`
+16. **Balanced Medicine** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 500 Narcotics; craft 250 Stimulants. `configured`
+17. **Field Medicine** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 100 Medical Brews; craft 250 Stimulants. `configured`
+18. **Tamer Preparation** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 500 Narcotics; craft 50 Tranquilizer Darts. `configured`
+19. **Arrow and Dart** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 250 Tranq Arrows; craft 50 Tranquilizer Darts. `configured`
+20. **Mixed Firepower** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 500 Advanced Rifle Bullets; craft 125 Shotgun Shells. `configured`
+21. **Powder and Shot** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 2,000 Gunpowder; craft 200 Simple Bullets. `configured`
+22. **Rifle Workshop** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 150 Simple Rifle Ammo; craft 500 Advanced Rifle Bullets. `configured`
+23. **Dual Sidearms** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 150 Simple Bullets; craft 250 Advanced Bullets. `configured`
+24. **Bow Supplies** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Thatch, or Fibre; craft 500 Stone Arrows; craft 250 Tranq Arrows. `configured`
+25. **Precision Supplies** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft 150 Metal Arrows; craft 100 Advanced Sniper Bullets. `configured`
+26. **Medic and Tamer** — Gather 10,000 resources in any combination: Rare Flowers, or Rare Mushrooms; craft 75 Medical Brews; craft 500 Narcotics. `configured`
+27. **Steady Hands** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 250 Stimulants; craft 50 Tranquilizer Darts. `configured`
+28. **Field Restock** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, Fibre, Thatch, Flint, Metal Ore, or Hide; craft 500 Stone Arrows; craft 50 Medical Brews; craft 250 Narcotics. `configured`
+29. **Range Supplies** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 500 Advanced Rifle Bullets; craft 50 Medical Brews. `configured`
+30. **Supply and Survive** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, Fibre, Thatch, Flint, Metal Ore, or Hide; craft 250 Tranq Arrows; craft 125 Shotgun Shells; craft 50 Medical Brews. `configured`
+
+[Back to top](#top)
+
+</details>
+
+<a id="weekly-manufacturing"></a>
+<details>
+<summary><strong>⚙️ Manufacturing (20)</strong></summary>
+
+Requires **1 daily completion** plus all listed objectives. **Reward: 25,000 Gold Nuggets each.**
+
+31. **Sparkpowder Reserve** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 10,000 Sparkpowder. `configured`
+32. **Powder Works** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 5,000 Gunpowder. `configured`
+33. **Paste Batch** — Gather 10,000 resources in any combination: Chitin, or Keratin; craft 2,500 Cementing Paste. `configured`
+34. **Circuit Batch** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft 500 Electronics. `configured`
+35. **Polymer Batch** — Gather 10,000 resources in any combination: Crystal, Obsidian, Oil, or Silica Pearls; craft 500 Polymer. `configured`
+36. **Powder Mill** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 5,000 Sparkpowder; craft 2,500 Gunpowder. `configured`
+37. **Fabricator Stock** — Gather 10,000 resources in any combination: Crystal, Obsidian, Oil, or Silica Pearls; craft 250 Electronics; craft 250 Polymer. `configured`
+38. **Workshop Adhesives** — Gather 10,000 resources in any combination: Chitin, Keratin, or Organic Polymer; craft 1,500 Cementing Paste; craft 250 Polymer. `configured`
+39. **Circuit Support** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft 250 Electronics; craft 1,000 Cementing Paste. `configured`
+40. **Production Reserve** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 5,000 Sparkpowder; craft 1,000 Cementing Paste. `configured`
+41. **Gunshop Stock** — Gather 50,000 resources in any combination: Stone, Flint, or Metal Ore; craft 2,500 Gunpowder; craft 250 Electronics. `configured`
+42. **Manufacturing Reserve** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 5,000 Sparkpowder; craft 250 Polymer. `configured`
+43. **Field Fabrication** — Gather 5,000 Black Pearls; craft 1,000 Cementing Paste; craft 250 Electronics; craft 250 Polymer. `configured`
+44. **Taming Industry** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 500 Narcotics; craft 1,000 Cementing Paste. `configured`
+45. **Medical Workshop** — Gather 10,000 resources in any combination: Rare Flowers, or Rare Mushrooms; craft 100 Medical Brews; craft 250 Stimulants; craft 500 Cementing Paste. `configured`
+46. **Advanced Supply Line** — Gather 5,000 Element; craft 2,000 Gunpowder; craft 250 Polymer. `configured`
+47. **Armoury Support** — Gather 5,000 Element; craft 250 Electronics; craft 2,000 Gunpowder; craft 500 Cementing Paste. `configured`
+48. **Chemical Stores** — Gather 10,000 resources in any combination: Rare Flowers, or Rare Mushrooms; craft 5,000 Sparkpowder; craft 250 Stimulants. `configured`
+49. **Sedation Works** — Gather 10,000 resources in any combination: Rare Flowers, or Rare Mushrooms; craft 5,000 Sparkpowder; craft 500 Narcotics. `configured`
+50. **General Production** — Gather 5,000 Black Pearls; craft 1,000 Gunpowder; craft 1,000 Cementing Paste; craft 200 Electronics; craft 200 Polymer. `configured`
+
+[Back to top](#top)
+
+</details>
+
+<a id="weekly-weapons-and-tools"></a>
+<details>
+<summary><strong>🛠️ Weapons and tools (15)</strong></summary>
+
+Requires **1 daily completion** plus all listed objectives. **Reward: 25,000 Gold Nuggets each.**
+
+51. **Bowstring Kit** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Thatch, or Fibre; craft 2 Bows; craft 500 Stone Arrows. `configured`
+52. **Crossbow Kit** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Thatch, or Fibre; craft 1 Crossbow; craft 500 Stone Arrows. `configured`
+53. **Tranquilizer Kit** — Gather 50,000 resources in any combination: Fibre, Wood, Fungal Wood, Thatch, or Hide; craft 1 Crossbow; craft 250 Tranq Arrows. `configured`
+54. **Longneck Kit** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 1 Longneck Rifle; craft 100 Tranquilizer Darts. `configured`
+55. **Sidearm Kit** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 1 Simple Pistol; craft 200 Simple Bullets. `configured`
+56. **Shotgun Kit** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 1 Shotgun; craft 150 Shotgun Shells. `configured`
+57. **Pump-Action Kit** — Gather 50,000 resources in any combination: Metal Ore, Wood, Fungal Wood, or Hide; craft 1 Pump-Action Shotgun; craft 150 Shotgun Shells. `configured`
+58. **Assault Kit** — Gather 10,000 resources in any combination: Crystal, Obsidian, Oil, or Silica Pearls; craft 1 Assault Rifle; craft 500 Advanced Rifle Bullets. `configured`
+59. **Fabricated Sidearm** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft 1 Fabricated Pistol; craft 250 Advanced Bullets. `configured`
+60. **Compound Kit** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft 1 Compound Bow; craft 150 Metal Arrows. `configured`
+61. **Precision Kit** — Gather 10,000 resources in any combination: Crystal, Obsidian, Oil, or Silica Pearls; craft 1 Fabricated Sniper Rifle; craft 100 Advanced Sniper Bullets. `configured`
+62. **Close Quarters** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Pike; craft 1 Sword; craft 50 Medical Brews. `configured`
+63. **Harvesting Kit** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 1 Metal Pick; craft 1 Metal Hatchet; craft 500 Cementing Paste. `configured`
+64. **Fibre Kit** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Metal Sickle; craft 250 Stimulants. `configured`
+65. **Field Bow Pair** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Thatch, or Fibre; craft 1 Bow; craft 1 Crossbow; craft 500 Stone Arrows. `configured`
+
+[Back to top](#top)
+
+</details>
+
+<a id="weekly-saddles"></a>
+<details>
+<summary><strong>🦕 Saddles (15)</strong></summary>
+
+Requires **1 daily completion** plus all listed objectives. **Reward: 25,000 Gold Nuggets each.**
+
+66. **Raptor Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 2 Raptor Saddles; craft 250 Tranq Arrows. `configured`
+67. **Parasaur Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 2 Parasaur Saddles; craft 500 Narcotics. `configured`
+68. **Trike Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Trike Saddle; craft 500 Narcotics. `configured`
+69. **Stego Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Stego Saddle; craft 250 Tranq Arrows. `configured`
+70. **Ankylo Outfitter** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 1 Ankylo Saddle; craft 500 Cementing Paste. `configured`
+71. **Doedicurus Outfitter** — Gather 10,000 resources in any combination: Chitin, or Keratin; craft 1 Doedicurus Saddle; craft 1,000 Sparkpowder. `configured`
+72. **Castoroides Outfitter** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 1 Castoroides Saddle; craft 500 Cementing Paste. `configured`
+73. **Argentavis Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Argentavis Saddle; craft 250 Tranq Arrows. `configured`
+74. **Pteranodon Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Pteranodon Saddle; craft 250 Narcotics. `configured`
+75. **Rex Outfitter** — Gather 10,000 resources in any combination: Chitin, Keratin, or Organic Polymer; craft 1 Rex Saddle; craft 500 Narcotics. `configured`
+76. **Therizinosaurus Outfitter** — Gather 10,000 resources in any combination: Chitin, Keratin, or Organic Polymer; craft 1 Therizinosaurus Saddle; craft 500 Narcotics. `configured`
+77. **Iguanodon Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 2 Iguanodon Saddles; craft 250 Tranq Arrows. `configured`
+78. **Baryonyx Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Baryonyx Saddle; craft 100 Medical Brews. `configured`
+79. **Sarco Outfitter** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft 1 Sarco Saddle; craft 100 Medical Brews. `configured`
+80. **Utility Saddle Pair** — Gather 50,000 resources in any combination: Wood, Fungal Wood, Stone, or Metal Ore; craft 1 Ankylo Saddle; craft 1 Doedicurus Saddle; craft 500 Cementing Paste. `configured`
+
+[Back to top](#top)
+
+</details>
+
+<a id="weekly-clothing"></a>
+<details>
+<summary><strong>🧵 Clothing (20)</strong></summary>
+
+Requires **1 daily completion** plus all listed objectives. **Reward: 25,000 Gold Nuggets each.**
+
+81. **Cloth Wardrobe** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Cloth set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots. `configured`
+82. **Cloth Field Set** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Cloth set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 50 Medical Brews. `configured`
+83. **Cloth Taming Set** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Cloth set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 250 Tranq Arrows. `configured`
+84. **Cloth Workshop Set** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Cloth set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 500 Cementing Paste. `configured`
+85. **Hide Wardrobe** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Hide set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots. `configured`
+86. **Hide Field Set** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Hide set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 50 Medical Brews. `configured`
+87. **Hide Taming Set** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Hide set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 250 Tranq Arrows. `configured`
+88. **Hide Workshop Set** — Gather 50,000 resources in any combination: Hide, Fibre, Wood, or Fungal Wood; craft one full Hide set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 500 Cementing Paste. `configured`
+89. **Chitin Wardrobe** — Gather 10,000 resources in any combination: Chitin, or Keratin; craft one full Chitin set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots. `configured`
+90. **Chitin Field Set** — Gather 10,000 resources in any combination: Chitin, or Keratin; craft one full Chitin set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 50 Medical Brews. `configured`
+91. **Chitin Taming Set** — Gather 10,000 resources in any combination: Chitin, or Keratin; craft one full Chitin set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 250 Tranq Arrows. `configured`
+92. **Chitin Workshop Set** — Gather 10,000 resources in any combination: Chitin, or Keratin; craft one full Chitin set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 500 Cementing Paste. `configured`
+93. **Flak Wardrobe** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft one full Flak set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots. `configured`
+94. **Flak Field Set** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft one full Flak set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 50 Medical Brews. `configured`
+95. **Flak Taming Set** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft one full Flak set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 250 Tranq Arrows. `configured`
+96. **Flak Workshop Set** — Gather 10,000 resources in any combination: Crystal, Obsidian, or Silica Pearls; craft one full Flak set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 500 Cementing Paste. `configured`
+97. **Fur Wardrobe** — Gather 10,000 Pelt; craft one full Fur set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots. `configured`
+98. **Fur Field Set** — Gather 10,000 Pelt; craft one full Fur set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 50 Medical Brews. `configured`
+99. **Fur Taming Set** — Gather 10,000 Pelt; craft one full Fur set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 250 Tranq Arrows. `configured`
+100. **Fur Workshop Set** — Gather 10,000 Pelt; craft one full Fur set: 1 headpiece, 1 chestpiece, 1 pair of gloves, 1 pair of leggings, and 1 pair of boots; craft 500 Cementing Paste. `configured`
+
+[Back to top](#top)
+
+</details>
+## Configuration checks
+
+- All **347 current quests** have been checked for missing counter references, empty referenced target lists and malformed blueprint-reference syntax.
+- All **100 weekly descriptions** match their configured gathering totals, crafting targets and amounts. Clothing slot requirements, gear limits, daily-completion requirements and rewards were checked.
+- Grouped gathering counters have short labels; crafting counters name their items. The latest label pass changed only display names in the config.
+- Missing legacy tame targets and malformed tracking references were repaired earlier in the rework. Permanent quest balancing remains pending.
+- The daily pool and permanent quest definitions were preserved during the weekly rebuild. Weekly IDs from superseded pools were not reused for new objectives.
+- These are **static configuration checks**, not proof of in-game completion or installed asset availability.
+
+<a id="before-adding-these-to-the-live-rotation"></a>
+## Testing and rollout
+
+- [x] Configure all **121 dailies** and **100 progression weeklies**.
+- [x] Set fixed rewards: **5,000 daily / 25,000 weekly**, with no extras.
+- [x] Configure weekly resource tiers: **50,000 / 10,000 / 5,000**.
+- [x] Require exactly **1 daily completion** on every weekly.
+- [x] Exclude hunting and structures from weekly objectives.
+- [x] Cap weekly equipment at 1–2 items and clothing at one full matching set.
+- [x] Include the supplied EVO variants in the relevant daily groups.
+- [x] Review counter labels and verify the current quest references.
+- [x] Observe **Rifle Workshop** and **Supply and Survive** loading and displaying in-game.
 - [x] Remove **Reset Dailies** from the prepared shop config.
-- [ ] Load the config on a test server and restart the map for the new custom tracking stats.
-- [ ] Check kill, gather and craft credit in-game, including Fungal Wood, mixed resource groups and normal/remapped crafting stations.
-- [ ] Check EVO Rex, Giga and Alpha kill credit, the three repaired taming objectives, and the corrected legacy boss objectives.
-- [ ] Confirm that completing a daily pays exactly **5,000 Gold Nuggets**.
-- [ ] Check every creature group against the **actual live spawn tables** on each cluster map.
-- [ ] Confirm qualifying Alpha availability on every map; revise or restrict objectives where necessary.
-- [ ] Revisit grind-heavy requirements such as **25,000 Keratin** and **3,000 Black Pearls**.
+- [ ] Verify daily-completion credit inside a weekly and progress across a daily reset.
+- [ ] Verify grouped gathering and crafting credit through the actual vanilla and modded stations.
+- [ ] Verify Medical Brew cooking, each clothing slot and weapon/saddle crafting.
+- [ ] Verify actual Element and Black Pearl credit through the acquisition methods used on the servers. Loot, crafting/conversion, purchases and transfers must not be assumed to count as harvesting.
+- [ ] Verify daily hunting, EVO variants and the repaired legacy objectives in-game.
+- [ ] Confirm completed quests pay exactly **5,000 daily / 25,000 weekly**.
+- [ ] Check actual creature spawns, resources, engrams and recipes on every cluster map.
+- [ ] Review difficult daily targets, including **25,000 Keratin** and **3,000 Black Pearls**, based on observed completion time.
 - [ ] Confirm **Reset Dailies** is removed from the live store.
-- [ ] Confirm the updated pool is deployed and old daily assignments are handled at the daily reset or through the supported reassignment process.
-- [ ] Review weekly quests, then permanent quests, as separate balance phases.
-- [ ] Reassess shop prices and the wider economy afterwards if needed.
+- [ ] Confirm cluster-wide rollout and handling of existing assignments at the normal reset.
+- [ ] Complete the permanent quest balance review, then revisit the wider economy if needed.
+
+Changing objectives can interrupt active progress. Back up the quest database, announce pool changes and schedule them for the normal reset. The latest counter-label-only revision changes no quest IDs, tracking keys or requirements.
 
 ## Current status
 
-This page now describes the **prepared 121-quest configuration**. Every listed daily is configured, and the supporting reference checks are complete. In-game behaviour, map coverage, economy balance and live rollout remain unconfirmed until the checks above are completed.
+**121 dailies and 100 weeklies are configured.** Two weekly quest screens have been observed in-game. Tracking, payouts, reset behaviour, map coverage and final balance still need validation. Cluster-wide live rollout remains unconfirmed.
 
 ---
-
 ## Credits
 
 - **!azaleaa** — Quest planning, rework and coordination.
